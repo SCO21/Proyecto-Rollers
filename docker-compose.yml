@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:9.0.0-1.el9
+    hostname: 492a932c07d7
+    mac_address: 02:42:ac:11:00:02
+    environment:
+      MYSQL_ROOT_PASSWORD: rollers123
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      GOSU_VERSION: 1.17
+      MYSQL_MAJOR: innovation
+      MYSQL_VERSION: 9.0.0-1.el9
+      MYSQL_SHELL_VERSION: 9.0.0-1.el9
+    volumes:
+      - /var/lib/mysql
+    networks:
+      - bridge
+    ports:
+      - "3308:3306"
+    restart: no
+    runtime: runc
