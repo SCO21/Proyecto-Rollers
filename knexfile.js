@@ -6,12 +6,12 @@
 module.exports = {
 
   development: {
-    client: 'mysql',
+    client: 'mysql2',
     connection: {
       host: 'localhost',
-      port: 3307,
+      port: 3308,
       user: 'root',
-      password: '',
+      password: 'rollers123',
       database: 'rollersdb',
     },
     pool: {
