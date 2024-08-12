@@ -6,8 +6,11 @@ exports.up = function(knex) {
     return knex.schema.createTable('leccion', table => {
         table.increments('id').primary();
         table.date("horario");
-       
+        table.integer('id_instructor').unsigned();
+
+        table.foreign('id_instructor').references('id').inTable('instructor');
     })
+
 
   
 };
